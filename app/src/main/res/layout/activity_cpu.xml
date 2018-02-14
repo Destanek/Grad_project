@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cpu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tni.mobile.project1.CPU.CPUActivity">
+
+    <TextView
+        android:id="@+id/headerMemory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CPU Usage Monitoring"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#00ff00"
+            android:layout_marginLeft="50dp"
+            android:gravity="start"
+            android:text="Total CPU Usage" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:layout_marginRight="50dp"
+            android:text="0"
+            android:id="@+id/totalCPU"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Monitoring"
+        style="@style/AppTheme.Button"
+        android:onClick="stopMonitor"/>
+
+</LinearLayout>

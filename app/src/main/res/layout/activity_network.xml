@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/headerMemory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Traffic Monitoring"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#00ff00"
+            android:gravity="end"
+            android:text="Transmit Bytes" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="start"
+            android:layout_marginLeft="5dp"
+            android:text="0"
+            android:id="@+id/TX"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#ff0000"
+            android:gravity="end"
+            android:text="Receive Bytes" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="start"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="0"
+            android:id="@+id/RX" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.6"
+            android:gravity="center"
+            android:text="(Bytes)"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/packageName"
+            android:layout_width="0dp"
+            android:layout_weight="2.8"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:text="Package"/>
+
+        <TextView
+            android:id="@+id/tx"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Transmit"/>
+
+        <TextView
+            android:id="@+id/rx"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Receive"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="0dp"
+        android:layout_weight="4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<Button-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Start All"-->
+            <!--style="@style/AppTheme.Button"-->
+            <!--android:onClick="startMonitor"/>-->
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Stop ALL"
+            style="@style/AppTheme.Button"
+            android:onClick="stopMonitor"/>
+
+    </LinearLayout>
+
+</LinearLayout>
